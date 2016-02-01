@@ -1,6 +1,6 @@
 # React with Flux Starter Kit
 
-Fork of @coryhouse great work on flux starter kit. In real project, gulp / grunt taks definition file tend to be too big and hard to maintain, in this fork we are  trying to chop gulp functionality in separate files, just for the sake of maintanibility.
+Fork of #coryhouse great work on flux starter kit. In real project, gulp / grunt taks definition file tend to be too big and hard to maintain, in this fork we are  trying to chop gulp functionality in separate files, just for the sake of maintanibility.
 
 Division proposal:
 
