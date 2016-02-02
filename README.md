@@ -1,22 +1,23 @@
-# React with Flux Starter Kit
+# React boiler plate
 
 Fork of @coryhouse great work on flux starter kit. In real project, gulp / grunt taks definition file tend to be too big and hard to maintain, in this fork we are  trying to chop gulp functionality in separate files, just for the sake of maintanibility.
 
-Division proposal:
+- Division proposal:
 
-- gulpfile.js: main gulfile.
-- gulpfile.config.js: config consts.
-- gulpfile.build.js: all things related with packaging (transpile, bundling js, css, linter...)
-- gulpfile.browser.js: connect web server and live reload.
+  + gulpfile.js: main gulfile.
+  + gulpfile.config.js: config consts.
+  + gulpfile.build.js: all things related with packaging (transpile, bundling js, css, linter...)
+  + gulpfile.browser.js: connect web server and live reload.
 
-Future enhancements:
+- Other enhancements:
+  + Adding map support (easier debugging).
 
-- Adding map support (easier debugging).
-- gulpfile.test.js: here we could place all karma / test config / tasks.
-
-This contains the completed environment setup that we walk through in detail in module 2 of ["Building Applications with React and Flux" on Pluralsight](http://www.pluralsight.com/author/cory-house).
+- Future enhancements:
+  + Typescript support.
+  + gulpfile.test.js: here we could place all karma / test config / tasks.
 
 ##This starter kit gives you the following:
+
 - React, React Router, and Flux for ultra-responsive UI development  
 - Browserify bundling  
 - jQuery with Bootstrap for styling  
@@ -27,7 +28,9 @@ This contains the completed environment setup that we walk through in detail in 
 -- migrates the built app to the dist folder  
 -- runs a dev webserver  
 -- opens your browser at the dev URL  
--- reloads the browser upon save  
+-- reloads the browser upon save
+-- debug map support.
+-- All this is divided and organized in different files per area.
 
 ##To get started:  
 1. Install [NodeJS](http://www.nodejs.org)  
@@ -44,3 +47,4 @@ You're now all set to [follow along with the course](http://www.pluralsight.com/
 ##Change Log
 * Aug 20, 2015 - Updated to use gulp-open 1.0.0 and browserify 11.0.1 since the course has been updated to use these versions.  
 * Jan 23, 2015 - Fixed missing quotes around jQuery globals in .eslintrc.
+* Feb, 2, 2016 - Divided gulp files per area, added map support
