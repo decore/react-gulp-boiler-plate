@@ -11,6 +11,7 @@ Division proposal:
 
 Future enhancements:
 
+- Adding map support (easier debugging).
 - gulpfile.test.js: here we could place all karma / test config / tasks.
 
 This contains the completed environment setup that we walk through in detail in module 2 of ["Building Applications with React and Flux" on Pluralsight](http://www.pluralsight.com/author/cory-house).
