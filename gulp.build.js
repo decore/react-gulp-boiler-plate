@@ -22,6 +22,13 @@ gulp.task('html', function() {
 gulp.task('js', function() {
 	browserify({
 		 entries: [config.paths.mainJs]
+		 ,options: {
+			           browserifyOptions: {
+			             plugin: [
+			               ['tsify', {extensions: 'tsx', target: 'es6'}]
+			             ]
+								 }
+							 }
 		,debug: true
 	})
 		.transform(reactify)

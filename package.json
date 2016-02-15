@@ -7,8 +7,16 @@
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Cory House",
+  "author": "Braulio Diez",
   "license": "ISC",
+  "browserify": {
+     "transform": [
+       "browserify-shim"
+     ]
+   },
+   "browserify-shim": {
+
+   },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
@@ -25,7 +33,9 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "browserify-shim": "^3.8.12",
     "gulp-sourcemaps": "^1.6.0",
+    "tsify": "^0.13.2",
     "vinyl-buffer": "^1.0.0"
-  }  
+  }
 }
