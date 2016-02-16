@@ -3,7 +3,7 @@
 import * as React from 'react'
 
 // <usersPage/>
-export class App extends React.Component {
+class App extends React.Component {
 
    // the JSX syntax is quite intuitive but check out
    // https://facebook.github.io/react/docs/jsx-in-depth.html

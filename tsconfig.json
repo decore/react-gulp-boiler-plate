@@ -1,17 +1,14 @@
 {
     "compilerOptions": {
         "target": "es5",
+        "module": "commonjs",
         "declaration": false,
         "noImplicitAny": false,
         "removeComments": true,
         "sourceMap": true,
         "jsx": "react",
-        "tsx": "react",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declaration": false,
-        "noImplicitAny": false,
-        "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true
@@ -22,7 +19,13 @@
         ".src/**/*.tsx",
         "./typings/**/*.ts",
         "./typings/tsd.d.ts",
+        "!./node_modules/**/*"
     ],
-    "exclude": [
-    ]
+    "files": [
+        "./typings/react/react.d.ts",
+        "./typings/tsd.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }
