@@ -10,14 +10,13 @@
   "author": "Braulio Diez",
   "license": "ISC",
   "browserify": {
-     "transform": [
-       "browserify-shim"
-     ]
-   },
-   "browserify-shim": {
-
-   },
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {},
   "dependencies": {
+    "babel-loader": "^6.2.2",
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
     "flux": "^2.0.3",
@@ -30,9 +29,11 @@
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "reactify": "^1.1.1",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.12.13"
   },
   "devDependencies": {
+    "babel-core": "^6.5.2",
     "browserify-shim": "^3.8.12",
     "gulp-sourcemaps": "^1.6.0",
     "tsify": "^0.13.2",
