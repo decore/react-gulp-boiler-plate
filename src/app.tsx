@@ -1,7 +1,12 @@
 //require("./usersPage.tsx")
 //import { ControllerBase } from '../../../core/controllerBase';
-import * as React from 'react'
+import * as React from 'react';
 
+
+// Render a simple React h1 component into the body.
+React.render(<h1>Hello, TypeScript!</h1>, document.getElementsByTagName('body')[0]);
+
+/*
 // <usersPage/>
 class App extends React.Component {
 
@@ -26,3 +31,4 @@ function render() {
  );
 
 render();
+*/
