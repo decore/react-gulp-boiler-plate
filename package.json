@@ -1,42 +1,30 @@
 {
-  "name": "psadmin",
+  "name": "reactboiler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "tsd reinstall --overwrite --save",
+    "start": "webpack-dev-server --content-base dist/"
   },
   "author": "Braulio Diez",
   "license": "ISC",
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
   "browserify-shim": {},
   "dependencies": {
-    "babel-loader": "^6.2.2",
     "bootstrap": "^3.3.5",
-    "browserify": "^11.0.1",
-    "flux": "^2.0.3",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^0.15.0",
     "gulp-open": "^1.0.0",
     "jquery": "^2.1.4",
-    "react": "^0.13.3",
-    "react-dom": "^0.14.7",
-    "react-router": "^0.13.3",
-    "reactify": "^1.1.1",
+    "react": "~0.14.7",
+    "typescript": "~1.7.5",
     "ts-loader": "^0.8.1",
     "vinyl-source-stream": "^1.1.0",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "~1.10.1"
   },
   "devDependencies": {
-    "babel-core": "^6.5.2",
-    "browserify-shim": "^3.8.12",
     "gulp-sourcemaps": "^1.6.0",
     "tsify": "^0.13.2",
     "vinyl-buffer": "^1.0.0"
