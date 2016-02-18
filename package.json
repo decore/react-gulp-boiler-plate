@@ -8,7 +8,6 @@
   },
   "author": "Braulio Diez",
   "license": "ISC",
-  "browserify-shim": {},
   "dependencies": {
     "bootstrap": "^3.3.5",
     "gulp": "^3.9.0",
@@ -25,8 +24,7 @@
     "webpack-dev-server": "~1.10.1"
   },
   "devDependencies": {
-    "gulp-sourcemaps": "^1.6.0",
-    "tsify": "^0.13.2",
+    "gulp-sourcemaps": "^1.6.0",    
     "vinyl-buffer": "^1.0.0"
   }
 }
