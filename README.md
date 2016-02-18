@@ -1,5 +1,7 @@
 # React boiler plate
 
+** Work in progress
+
 Fork of @coryhouse great work on flux starter kit. In real project, gulp / grunt taks definition file tend to be too big and hard to maintain, in this fork we are  trying to chop gulp functionality in separate files, just for the sake of maintanibility.
 
 - Division proposal:
@@ -48,3 +50,4 @@ You're now all set to [follow along with the course](http://www.pluralsight.com/
 * Aug 20, 2015 - Updated to use gulp-open 1.0.0 and browserify 11.0.1 since the course has been updated to use these versions.  
 * Jan 23, 2015 - Fixed missing quotes around jQuery globals in .eslintrc.
 * Feb, 2, 2016 - Divided gulp files per area, added map support
+* Feb, 18, 2016 - Migrated to webpack and added typescript (ts / tsx) support
