@@ -9,7 +9,7 @@ var config = {
       		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
     	],
 		dist: './dist',
-		mainJs: './src/main.js'
+		mainJs: './src/app.tsx'
 	}
 }
 

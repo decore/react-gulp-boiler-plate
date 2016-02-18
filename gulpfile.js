@@ -7,3 +7,4 @@ var browser = require('./gulp.browser');
 var build = require('./gulp.build');
 
 gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
+gulp.task('build', ['js'])
