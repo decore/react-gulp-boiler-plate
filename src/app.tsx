@@ -1,6 +1,21 @@
 
 import * as React from 'react';
 
-// Render a simple React h1 component into the body.
-// http://stackoverflow.com/questions/33980336/property-render-does-not-exist-on-type-typeof-react
-React.render(<h1>Hello, TypeScript!</h1>, document.getElementsByTagName('body')[0]);
+interface Props {
+}
+
+// Nice tsx guide: https://github.com/Microsoft/TypeScript/wiki/JSX
+class App extends React.Component<Props, {}> {
+   // the JSX syntax is quite intuitive but check out
+   // https://facebook.github.io/react/docs/jsx-in-depth.html
+   // if you need additional help
+   public render() {
+       return (
+         <div>
+          <span>Component Home app</span>
+        </div>
+       );
+  }
+}
+
+React.render(<App/>, document.getElementsByTagName('body')[0]);
