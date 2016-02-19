@@ -18,6 +18,8 @@ module.exports = {
     path: path.join(basePath, "dist"),
     filename: 'bundle.js'
   },
+  // http://webpack.github.io/docs/configuration.html#devtool
+  devtool: 'source-map',
   module: {
 		loaders: [
 			{
