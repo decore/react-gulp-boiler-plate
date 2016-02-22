@@ -12,7 +12,7 @@ module.exports = {
       extensions: ['', '.js', '.ts', '.tsx']
   },
   entry: {
-           app: ['./app.tsx']
+           app: ['./components/app.tsx']
          },
   output: {
     path: path.join(basePath, "dist"),
