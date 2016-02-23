@@ -1,4 +1,4 @@
-
+// import 'bootstrap/dist/css/bootstrap.css';  See webpack.config.js
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Header from './common/header.tsx';

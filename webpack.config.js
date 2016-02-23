@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var basePath = __dirname;
 
@@ -14,7 +15,9 @@ module.exports = {
   },
 
   entry: [
-    './components/app.tsx', './site.css'
+    './components/app.tsx',
+    './css/site.css',
+    '../node_modules/bootstrap/dist/css/bootstrap.css'
   ],
 
   output: {
@@ -40,12 +43,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'ts-loader'
       },
-
+      //Note: Doesn't exclude node_modules to load bootstrap
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'style-loader!css-loader'
-      }
+        loader: ExtractTextPlugin.extract('style-loader','css-loader')
+      },
+      //Loading glyphicons => https://github.com/gowravshekar/bootstrap-webpack
+      //Using here url-loader and file-loader
+      {test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
 		]
 	},
 
@@ -53,6 +61,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/
       template: 'index.html' //Name of template in ./src
+    }),
+    new ExtractTextPlugin('bundle.css'),
+    //Expose jquery used by bootstrap
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
   ]
 }
