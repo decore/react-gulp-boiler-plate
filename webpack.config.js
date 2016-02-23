@@ -12,12 +12,14 @@ module.exports = {
       extensions: ['', '.js', '.ts', '.tsx']
   },
   entry: {
-           app: ['./app.tsx']
+           app: ['./components/app.tsx']
          },
   output: {
     path: path.join(basePath, "dist"),
     filename: 'bundle.js'
   },
+  // http://webpack.github.io/docs/configuration.html#devtool
+  devtool: 'source-map',
   module: {
 		loaders: [
 			{
