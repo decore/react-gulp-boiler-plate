@@ -13,7 +13,7 @@ module.exports = {
   },
 
   entry: [
-    './app.tsx', './site.css'
+    './components/app.tsx', './site.css'
   ],
 
   output: {
@@ -28,6 +28,9 @@ module.exports = {
     host: 'localhost',
     port: 8080
   },
+  
+  // http://webpack.github.io/docs/configuration.html#devtool
+  devtool: 'source-map',
 
   module: {
 		loaders: [
