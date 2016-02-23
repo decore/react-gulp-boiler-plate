@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var basePath = __dirname;
 
@@ -28,7 +29,7 @@ module.exports = {
     host: 'localhost',
     port: 8080
   },
-  
+
   // http://webpack.github.io/docs/configuration.html#devtool
   devtool: 'source-map',
 
@@ -46,5 +47,12 @@ module.exports = {
         loader: 'style-loader!css-loader'
       }
 		]
-	}
+	},
+
+  plugins:[
+    new HtmlWebpackPlugin({
+      filename: 'index.html', //Name of file in ./dist/
+      template: 'index.html' //Name of template in ./src
+    })
+  ]
 }
