@@ -25,8 +25,6 @@ class App extends React.Component<Props, {}> {
   }
 }
 
-//let store = createStore(myApp, {})
-
 let store = createStore((state, action) => {
                           switch (action.type)  {
                             default:
