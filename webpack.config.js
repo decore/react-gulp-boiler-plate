@@ -12,9 +12,9 @@ module.exports = {
       extensions: ['', '.js', '.ts', '.tsx']
   },
 
-  entry: {
-    app: ['./app.tsx']
-  },
+  entry: [
+    './app.tsx', './site.css'
+  ],
 
   output: {
     path: path.join(basePath, "dist"),
@@ -34,6 +34,12 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: 'ts-loader'
+      },
+
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader!css-loader'
       }
 		]
 	}
