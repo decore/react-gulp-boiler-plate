@@ -11,26 +11,30 @@ module.exports = {
       // .ts is optional, in case you will be importing any regular ts files.
       extensions: ['', '.js', '.ts', '.tsx']
   },
+
   entry: {
-           app: ['./app.tsx']
-         },
+    app: ['./app.tsx']
+  },
+
   output: {
     path: path.join(basePath, "dist"),
     filename: 'bundle.js'
   },
+
+  devServer: {
+    contentBase: './dist', //Content base
+    inline: true, //Enable watch and live reload
+    host: 'localhost',
+    port: 8080
+  },
+
   module: {
 		loaders: [
 			{
-        test: /\.ts$/,
-        exclude: /node_modules/,
-        loader: 'ts-loader'
-      },
-      {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: 'ts-loader'
       }
 		]
 	}
-
 }
