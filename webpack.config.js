@@ -58,10 +58,12 @@ module.exports = {
 	},
 
   plugins:[
+    //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/
       template: 'index.html' //Name of template in ./src
     }),
+    //Generate bundle.css => https://github.com/webpack/extract-text-webpack-plugin
     new ExtractTextPlugin('bundle.css'),
     //Expose jquery used by bootstrap
     new webpack.ProvidePlugin({
