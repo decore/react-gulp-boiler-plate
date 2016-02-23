@@ -21,6 +21,7 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  //https://webpack.github.io/docs/webpack-dev-server.html#webpack-dev-server-cli
   devServer: {
     contentBase: './dist', //Content base
     inline: true, //Enable watch and live reload
