@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import Header from './common/header.tsx';
 import Contributors from './contributors/contributorsPage.tsx';
 
@@ -18,4 +19,4 @@ class App extends React.Component<Props, {}> {
   }
 }
 
-React.render(<App/>, document.getElementsByTagName('body')[0]);
+ReactDOM.render(<App/>, document.getElementById('root'));

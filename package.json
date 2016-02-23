@@ -17,14 +17,15 @@
     "gulp-open": "^1.0.0",
     "jquery": "^2.1.4",
     "react": "~0.14.7",
-    "typescript": "~1.7.5",
+    "react-dom": "^0.14.7",
     "ts-loader": "^0.8.1",
+    "typescript": "~1.7.5",
     "vinyl-source-stream": "^1.1.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "~1.10.1"
   },
   "devDependencies": {
-    "gulp-sourcemaps": "^1.6.0",    
+    "gulp-sourcemaps": "^1.6.0",
     "vinyl-buffer": "^1.0.0"
   }
 }
