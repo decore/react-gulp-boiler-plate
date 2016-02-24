@@ -1,10 +1,20 @@
 
-import { combineReducers } from 'redux'
-import contributorsReducer from './contributors'
+import { combineReducers } from 'redux';
+import contributorsReducer = require('./contributors');
 
-let myApp = combineReducers({
+/*
+const myApp = combineReducers({
    contributors: contributorsReducer
 });
 
+export default myApp;
+*/
+
+const myApp =(state, action) => {
+                          switch (action.type)  {
+                            default:
+                              return state;
+                          }
+                        };
 
 export default myApp;

@@ -1,12 +1,12 @@
 
 import * as React from 'react';
+import { connect } from 'react-redux'
 
 interface Props extends React.Props<ContributorsPage> {
   contributors : Array<any>;
 }
 
-//export default class ContributorsPage extends React.Component<Props, {}> {
-export default class ContributorsPage extends React.Component<Props, {}> {
+class ContributorsPage extends React.Component<Props, {}> {
    context: any;
 
    constructor(props, context) {
@@ -54,3 +54,17 @@ export default class ContributorsPage extends React.Component<Props, {}> {
        );
   }
 }
+
+const mapStateToProps = (state) => {
+    return {
+      contributors: state
+    }
+}
+
+const VisibleContributorsPage = connect(
+                                  mapStateToProps
+                                  ,null
+                                )(ContributorsPage)
+
+
+export default VisibleContributorsPage;

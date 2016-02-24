@@ -1,4 +1,5 @@
 // contributors =
+
 function contributors (state = [], action) {
   switch (action.type) {
     case 'CONTRIBUTORS_LOAD':
