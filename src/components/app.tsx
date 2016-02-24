@@ -15,11 +15,12 @@ interface Props {
 
 // Nice tsx guide: https://github.com/Microsoft/TypeScript/wiki/JSX
 class App extends React.Component<Props, {}> {
+  
    public render() {
        return (
         <div className="container-fluid">
           <Header/>
-          <Contributors/>
+          <Contributors contributors= {[{name: 'test', lastname: 'test2'}]} />
         </div>
        );
   }
