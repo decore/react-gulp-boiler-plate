@@ -4,29 +4,27 @@
   "description": "",
   "scripts": {
     "postinstall": "tsd reinstall --overwrite --save",
-    "start": "webpack-dev-server --content-base dist/"
+    "start": "webpack-dev-server"
   },
   "author": "Braulio Diez",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.5",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^2.2.0",
-    "gulp-eslint": "^0.15.0",
-    "gulp-open": "^1.0.0",
     "jquery": "^2.1.4",
     "react": "~0.14.7",
     "react-dom": "^0.14.7",
-    "redux": "^3.3.1",
-    "ts-loader": "^0.8.1",
-    "typescript": "~1.7.5",
-    "vinyl-source-stream": "^1.1.0",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "~1.10.1"
+    "redux": "^3.3.1"
   },
   "devDependencies": {
-    "gulp-sourcemaps": "^1.6.0",
-    "vinyl-buffer": "^1.0.0"
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.9.0",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.8.1",
+    "typescript": "~1.7.5",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "~1.10.1"
   }
 }

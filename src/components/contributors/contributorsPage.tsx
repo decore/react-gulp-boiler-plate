@@ -1,9 +1,12 @@
 
 import * as React from 'react';
 import { connect } from 'react-redux'
+import loadContributors from '../../actions/loadContributors'
+import ContributorRow from './contributorRow';
 
-interface Props extends React.Props<ContributorsPage> {
-  contributors : Array<any>;
+interface Props  {
+  contributors : any; //Array<any>;
+  onLoad : any;
 }
 
 class ContributorsPage extends React.Component<Props, {}> {
@@ -13,10 +16,6 @@ class ContributorsPage extends React.Component<Props, {}> {
      super(props, context);
    }
 
-   propTypes: {
-   		contributors : Array<any>;
-   	}
-
    static contextTypes = {
         store: React.PropTypes.object
    }
@@ -24,14 +23,18 @@ class ContributorsPage extends React.Component<Props, {}> {
 
    componentDidMount() {
      this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());
+
+     this.props.onLoad();
    }
 
    componentWillUnmount() {
      this.unsubscribe();
    }
 
-
    public render() {
+       if(!this.props.contributors)
+          return (<div>No data</div>)
+
        return (
          <div className="row">
            <table className="table">
@@ -40,14 +43,10 @@ class ContributorsPage extends React.Component<Props, {}> {
    						<th>Lastname</th>
    					</thead>
    					<tbody>
-                {this.props.contributors.map((contributor) => {
-                        return (
-                        <tr>
-                          <td>{contributor.name}</td>
-                          <td>{contributor.lastname}</td>
-                        </tr>);
-                      })
-                }
+                {
+                  this.props.contributors.map(contributor =>
+                  <ContributorRow contributor = {contributor}/>
+                )}
    					</tbody>
    				</table>
         </div>
@@ -57,14 +56,23 @@ class ContributorsPage extends React.Component<Props, {}> {
 
 const mapStateToProps = (state) => {
     return {
-      contributors: state
+      contributors: state.contributors
     }
 }
 
-const VisibleContributorsPage = connect(
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLoad: () => {return dispatch(loadContributors())}
+  }
+}
+
+
+
+const ContainerContributorsPage = connect(
                                   mapStateToProps
-                                  ,null
+                                  ,mapDispatchToProps
                                 )(ContributorsPage)
 
 
-export default VisibleContributorsPage;
+export default ContainerContributorsPage;

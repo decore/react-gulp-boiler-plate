@@ -1,4 +1,4 @@
-// contributors =
+
 
 function contributors (state = [], action) {
   switch (action.type) {

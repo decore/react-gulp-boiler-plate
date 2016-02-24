@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import myApp  from '../reducers/main';
 import Header from './common/header';
-import VisibleContributorsPage from './contributors/contributorsPage';
+import ContainerContributorsPage from './contributors/contributorsPage';
 
 
 // Starting with redux, good starting point:
@@ -20,21 +20,13 @@ class App extends React.Component<Props, {}> {
        return (
         <div className="container-fluid">
           <Header/>
-          <VisibleContributorsPage contributors={[]} />
+          <ContainerContributorsPage contributors={[]} onLoad={[]} />
         </div>
        );
   }
 }
 
 let store = createStore(myApp);
-/*
-let store = createStore((state, action) => {
-                          switch (action.type)  {
-                            default:
-                              return state;
-                          }
-                        }, {});
-*/
 
 ReactDOM.render(
   <Provider store={store}>
