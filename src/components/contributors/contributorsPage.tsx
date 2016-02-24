@@ -70,7 +70,7 @@ const mapDispatchToProps = (dispatch) => {
 
 
 const ContainerContributorsPage = connect(
-                                  mapStateToProps
+                                   mapStateToProps
                                   ,mapDispatchToProps
                                 )(ContributorsPage)
 
