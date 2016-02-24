@@ -4,10 +4,12 @@ import { connect } from 'react-redux'
 import loadContributors from '../../actions/loadContributors'
 import ContributorRow from './contributorRow';
 
+
 interface Props  {
-  contributors : any; //Array<any>;
-  onLoad : any;
+  contributors? : Array<any>;
+  onLoad? : () => void;
 }
+
 
 class ContributorsPage extends React.Component<Props, {}> {
    context: any;
@@ -22,8 +24,7 @@ class ContributorsPage extends React.Component<Props, {}> {
    private unsubscribe: Function;
 
    componentDidMount() {
-     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());
-
+     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());     
      this.props.onLoad();
    }
 
