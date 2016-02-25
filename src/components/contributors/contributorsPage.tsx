@@ -10,7 +10,6 @@ interface Props extends React.Props<ContributorsPage>  {
   onLoad? : () => void;
 }
 
-
 class ContributorsPage extends React.Component<Props, {}> {
    context: any;
 
@@ -55,13 +54,11 @@ const mapStateToProps = (state) => {
     }
 }
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     onLoad: () => dispatch(loadContributors())
   }
 }
-
 
 const ContainerContributorsPage = connect(
                                    mapStateToProps

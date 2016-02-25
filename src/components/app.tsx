@@ -2,14 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import myApp  from '../reducers';
+import reducers  from '../reducers';
 import Header from './common/header';
 import ContainerContributorsPage from './contributors/contributorsPage';
 
-
 // Starting with redux, good starting point:
 // https://github.com/reactjs/redux/blob/master/docs/basics/ExampleTodoList.md
-
 interface Props {
 }
 
@@ -25,7 +23,7 @@ class App extends React.Component<Props, {}> {
   }
 }
 
-let store = createStore(myApp);
+let store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>

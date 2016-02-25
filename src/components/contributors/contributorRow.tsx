@@ -20,7 +20,6 @@ export default class ContributorRow extends React.Component<Props, {}> {
          return <div></div>;
        }
 
-
        return(
           <tr>
             <td>{this.props.contributor.name}</td>
