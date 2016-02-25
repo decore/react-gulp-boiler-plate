@@ -1,21 +1,18 @@
 # React boiler plate
 
-** Work in progress
-
-The goal of this project is to provide a simple startup project that will support typescript (ts/tsx) and a well structure bundling / build process.
-
-- Other enhancements:
+The goal of this project is to provide a simple startup project with the following characteristics:
+  + Type script based.
+  + React + Redux.
   + Adding map support (easier debugging).
-  + Typescript support.
 
-- Future enhancements:  
-  + gulpfile.test.js: here we could place all karma / test config / tasks.
-  + Redux support.
-  + React-Router support.
-
+- Future enhancements:
+   + Create some simple pages that will include async data loading.
+   + Introduce react-router.
+   + web pack test: here we could place all karma / test config / tasks.  
+   
 ##This starter kit gives you the following:
 
-- React.  
+- React + Redux.  
 - Webpack bundling.  
 - Typescript support.
 - Simple project structure
