@@ -5,7 +5,7 @@ import loadContributors from '../../actions/loadContributors'
 import ContributorRow from './contributorRow';
 
 
-interface Props  {
+interface Props extends React.Props<ContributorsPage>  {
   contributors? : Array<any>;
   onLoad? : () => void;
 }
@@ -24,7 +24,7 @@ class ContributorsPage extends React.Component<Props, {}> {
    private unsubscribe: Function;
 
    componentDidMount() {
-     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());     
+     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());
      this.props.onLoad();
    }
 
