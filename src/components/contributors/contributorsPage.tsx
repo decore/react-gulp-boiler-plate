@@ -21,15 +21,9 @@ class ContributorsPage extends React.Component<Props, {}> {
    static contextTypes = {
         store: React.PropTypes.object
    }
-   private unsubscribe: Function;
 
    componentDidMount() {
-     this.unsubscribe = this.context.store.subscribe(() => this.forceUpdate());
      this.props.onLoad();
-   }
-
-   componentWillUnmount() {
-     this.unsubscribe();
    }
 
    public render() {
@@ -64,10 +58,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onLoad: () => {return dispatch(loadContributors())}
+    onLoad: () => dispatch(loadContributors())
   }
 }
-
 
 
 const ContainerContributorsPage = connect(
